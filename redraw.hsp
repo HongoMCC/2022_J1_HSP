@@ -1,24 +1,24 @@
 //redraw p1
-//p1に0を設定すると、描画が一時停止され、描画内容は仮想画面に描画される。
-//p1に1を設定すると、描画が再開され、描画内容はメインの画面に描画される。
+//p1��0��ݒ肷��ƁA�`�悪�ꎞ��~����A�`����e�͉��z��ʂɕ`�悳���B
+//p1��1��ݒ肷��ƁA�`�悪�ĊJ����A�`����e�̓��C���̉�ʂɕ`�悳���B
 
-cls 					//画面を初期化
-x=0 					//変数xに0を代入
-y=0 					//変数yに0を代入
+cls 					//��ʂ�������
+x=0 					//�ϐ�x��0����
+y=0 					//�ϐ�y��0����
 
-repeat 					//繰り返し開始
-	redraw 0			//描画を一時停止
-		cls				//画面内の物を全て消す
-		pos x,y 		//座標指定
-		mes "(^_^)ﾉｼ" 	//動かす文字設定
-	redraw 1 			//ここまでをまとめて描画
+repeat 					//�J��Ԃ��J�n
+	redraw 0			//�`����ꎞ��~
+		cls				//��ʓ��̕���S�ď���
+		pos x,y 		//���W�w��
+		mes "(^_^)ɼ" 	//�����������ݒ�
+	redraw 1 			//�����܂ł��܂Ƃ߂ĕ`��
 
-	stick key 			//変数Keyにキーボード入力を代入
+	stick key 			//�ϐ�Key�ɃL�[�{�[�h���͂���
 
-	if key=1:x-=1		//左
-	if key=2:y-=1		//上
-	if key=4:x+=1		//右
-	if key=8:y+=1		//下
+	if key=1:x-=1		//��
+	if key=2:y-=1		//��
+	if key=4:x+=1		//�E
+	if key=8:y+=1		//��
 
-	await 1				//応答を待つ
-loop					//繰り返し終了
+	await 1				//������҂�
+loop					//�J��Ԃ��I��
