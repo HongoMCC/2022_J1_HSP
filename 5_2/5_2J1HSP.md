@@ -24,19 +24,26 @@ mmload-mmplay
 picload
 ## サンプル
 ### サンプル1(Celload)
+```
 cls 4  
 celload "invader.png",1  
 celput 1  
+```
 ### サンプル2(mmload)
 #### A
+```
 cls  
 mmload "jump01.mp3",1  
 mmplay 1  
+```
 #### B
+```
 cls  
 mmload "jump01.mp3",1,1  
 mmplay 1  
+```
 #### C
+```
 cls  
 mmload "jump01.mp3",1,1  
 mmplay 1  
@@ -45,4 +52,4 @@ stick key
 if key=32:mmstop  
 await 1  
 loop  
-
+```
